@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,16 @@ import com.bank.accounts.repositories.AccountsRepository;
 public class AccountsController {
 	@Autowired
 	private AccountsRepository accountsRepository;
+	
+	@Value("${accounts-config.version}")
+	private String version;
+	
+	@GetMapping("/version")
+    public String getVersion() {
+		return version;
+		//System.out.println(version);
+		//return new Version(version);
+    }
 	
 	@GetMapping("/accounts")
     public List<Account> getUsers() {
