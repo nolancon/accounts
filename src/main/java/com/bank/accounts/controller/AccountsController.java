@@ -28,7 +28,7 @@ public class AccountsController {
 	private AccountsRepository accountsRepository;
 	
 	
-	@GetMapping("/version")
+	@GetMapping("/accounts/version")
     public Version getVersion() {
 		return new Version(version.getVersion());
     }
