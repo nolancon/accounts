@@ -6,7 +6,7 @@
     <version>2.7.7</version>
   </parent>
   <groupId>com.bank.accounts</groupId>
-  <artifactId>accounts</artifactId>
+  <artifactId>accounts-app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>accounts</name>
   <description>accounts</description>
@@ -36,7 +36,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+ 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 			<version>3.1.5</version>
@@ -48,6 +48,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bootstrap</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>

@@ -19,8 +19,7 @@ import com.bank.accounts.repositories.AccountsRepository;
 
 
 @RestController
-public class AccountsController {
-		
+public class AccountsController {	
 	@Autowired
 	Version version;
 	
