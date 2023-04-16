@@ -20,10 +20,7 @@ import com.bank.accounts.repositories.AccountsRepository;
 
 @RestController
 public class AccountsController {
-	
-	@Value("${config.version}")
-	//private String version;
-	
+		
 	@Autowired
 	Version version;
 	
@@ -33,8 +30,6 @@ public class AccountsController {
 	
 	@GetMapping("/version")
     public Version getVersion() {
-		//return version;
-		//System.out.println(version);
 		return new Version(version.getVersion());
     }
 	
