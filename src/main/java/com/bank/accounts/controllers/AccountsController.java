@@ -1,4 +1,4 @@
-package com.bank.accounts.controller;
+package com.bank.accounts.controllers;
 
 import java.util.List;
 import java.util.Optional;
