@@ -20,17 +20,19 @@ import com.bank.accounts.repositories.AccountsRepository;
 
 @RestController
 public class AccountsController {
-	@Autowired
-	private AccountsRepository accountsRepository;
 	
 	@Value("${accounts-config.version}")
 	private String version;
 	
+	@Autowired
+	private AccountsRepository accountsRepository;
+	
+	
 	@GetMapping("/version")
-    public String getVersion() {
-		return version;
+    public Version getVersion() {
+		//return version;
 		//System.out.println(version);
-		//return new Version(version);
+		return new Version(version);
     }
 	
 	@GetMapping("/accounts")
