@@ -21,7 +21,7 @@ import com.bank.accounts.repositories.AccountsRepository;
 @RestController
 public class AccountsController {
 	
-	@Value("${accounts-config.version}")
+	@Value("${accounts.version}")
 	private String version;
 	
 	@Autowired
